@@ -1,0 +1,608 @@
+@charset "utf-8";
+
+/* webfont */
+@font-face {
+    font-family: 'SchoolSafetyMustache';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimKossuyeomR.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-family: 'SchoolSafetyMustache';
+    font-size: 50px;
+    font-weight: 400;
+    color: #374B74;
+}
+
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: 'SUIT', sans-serif;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #111111;
+}
+
+#wrap {
+    min-width: 1360px;
+}
+
+#header {
+
+    height: 118px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.inner_header {
+    width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb {
+    display: flex;
+    gap: 82px;
+}
+
+.gnb ul {
+    display: flex;
+    padding: 0 30px;
+    align-items: end;
+    height: 64px;
+}
+
+.menu {
+    gap: 50px;
+}
+
+.menu li a {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.icon {
+    gap: 30px;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.icon li a img {
+    display: block;
+}
+
+#visual {
+    width: 100%;
+    height: 1080px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#visual img {
+    display: block;
+}
+
+#section1 {
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    padding: 200px 0;
+    margin: 0 auto;
+
+}
+
+.img_box {
+    width: 816px;
+}
+
+.img_box img {
+    display: block;
+}
+
+.text_box {
+    width: 388px;
+
+}
+
+.text_box h3 {
+    font-family: 'SchoolSafetyMustache';
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.text_box p {
+    font-size: 17px;
+}
+
+.text_box a {
+    border: 1px solid #111111;
+    padding: 10px;
+}
+
+#section2 {
+
+    width: 1320px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+
+
+}
+
+#section2 h2 {
+    margin-bottom: 50px;
+}
+
+#section2 ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section2 ul li {
+    display: block;
+    align-content: center;
+    text-align: center;
+
+}
+
+#section2 ul li img {
+    display: block;
+
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+#section2 ul li:hover img {
+    box-shadow: 0 0 40px rgba(78, 78, 78, 0.8);
+}
+
+#section2 ul li p {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+#visual2 {
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#visual2 img {
+    display: block;
+    width: 1920px;
+}
+
+#section3 {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    column-gap: 64px;
+    flex-wrap: wrap;
+}
+
+#section3 h2 {
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+/* SVG 구역 스타일 */
+#section3 svg path {
+    transition: fill 0.2s ease;
+    cursor: pointer;
+}
+
+/* 클릭하여 선택된 구역 스타일 (이미지의 녹색 반영) */
+#section3 svg path.active {
+    fill: #86AA7C !important;
+
+    /* stroke: #D2E7CC !important; */
+    stroke-width: 1.5;
+}
+
+/* 지도 위 텍스트/아이콘 클릭 방해 금지 */
+#section3 svg text,
+#section3 svg image,
+.map-icon {
+    pointer-events: none;
+}
+
+/* 코스 탭 */
+.course {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.tab-nav {
+    width: 900px;
+    margin: 20px auto;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    width: 140px;
+    height: 48px;
+    background-color: #E9E9E9;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+}
+
+.tab-btn:hover {
+    background-color: #84C2DB;
+    color: #fff;
+}
+
+.tab-btn.active {
+    background-color: #374B74;
+    color: #fff;
+}
+
+/* 상세 내용 박스 */
+.course-detail {
+    display: none;
+    /* 기본 숨김 */
+    margin-top: 30px;
+    text-align: center;
+    animation: fadeEffect 0.5s;
+}
+
+.course-detail.active {
+    display: block;
+    /* 활성화 시 보임 */
+}
+
+.course-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#section4 {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px 200px;
+}
+
+.section-title {
+
+    margin-bottom: 50px;
+}
+
+.section4_inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.section4_img {
+    width: 665px;
+}
+
+.section4_img img {
+    display: block;
+}
+
+.section4_box {
+    width: 584px;
+}
+
+.section4_box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.section4_box .hash {
+    display: flex;
+    gap: 30px;
+    padding: 27px 0 36px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section4_box p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.section4_side {
+    width: 100%;
+    height: 120px;
+    margin: 15px 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.section4_side ul {
+    display: flex;
+    gap: 18px;
+}
+
+.section4_side ul li {
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* 1. 전체 배너 영역 (배경 및 레이아웃 잡기) */
+#banner_bottom {
+
+    width: 100%;
+    height: 412px;
+
+    background-image: url('../images/banner_bottom.svg');
+    background-size: cover;
+    background-position: center;
+
+    /* 박스들을 가로로 정렬하기 위한 Flexbox 설정 */
+    display: flex;
+    justify-content: flex-end;
+    /* 오른쪽으로 정렬 (갈매기 공간 확보) */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    gap: 20px;
+    /* 박스 사이 간격 */
+    padding-right: 10%;
+    /* 오른쪽 여백 */
+    box-sizing: border-box;
+}
+
+
+/* 3. 흰색 안내 박스 스타일 (.banner_box) */
+.banner_box {
+    width: 360px;
+    height: 270px;
+    /* 박스 너비 */
+    background-color: #fff;
+    /* 흰색 배경 */
+    border-radius: 20px;
+    /* 둥근 모서리 */
+    padding: 30px;
+    /* 내부 여백 */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* 그림자 효과 */
+    z-index: 10;
+    /* 배경보다 위에 뜨도록 설정 */
+    box-sizing: border-box;
+    /* 텍스트 정렬 */
+    text-align: left;
+}
+
+/* 4. 박스 내부 폰트 꾸미기 */
+.banner_box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    /* 제목과 내용 사이 간격 */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* 텍스트와 이모지 사이 간격 */
+}
+
+.banner_box p {
+    font-size: 17px;
+    color: #555;
+    /* 본문은 약간 회색 */
+
+    /* word-break: keep-all; */
+    /* 단어 단위 줄바꿈 (한글 최적화) */
+}
+
+.footer {
+    background-color: #6C9BAD;
+    /* 이미지의 짙은 하늘색/청록색 */
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 0;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    margin-right: 25px;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-left: 10px;
+    /* 실제 아이콘 사용 시 img 태그나 i 태그로 교체 */
+    color: #6C9BAD;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+
+}
+
+.icon-item {
+    position: relative;
+
+}
+
+.icons2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.icon-item:hover .icons2 {
+    display: block;
+
+}
+
+.icon-item:hover .icons1 {
+    opacity: 0;
+
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.company-info p {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.footer-logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* sub1 S */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* sub1 E */

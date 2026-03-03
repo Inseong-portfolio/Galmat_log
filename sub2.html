@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1360">
+    <title>갈맷로그</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- webfont -->
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/sub2.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="inner_header">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.svg" alt="logo">
+                    </a>
+                </h1>
+                <div class="gnb">
+                    <ul class="menu">
+                        <li><a href="sub1.html">코스 소개</a></li>
+                        <li><a href="sub2.html">추천 List</a></li>
+                        <li><a href="sub3.html">여행 로그</a></li>
+                    </ul>
+
+                    <ul class="icon">
+                        <li><a href="#"><img src="./images/icon1.png" alt="icon"></a></li>
+                        <li><a href="#"><img src="./images/icon2.png" alt="icon"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- header -->
+
+        <div id="sub2_banner">
+            <img src="./images/sub2/sub2_banner.png" alt="배너">
+        </div>
+
+        <div id="section1">
+            <h2 data-aos="fade-down" data-aos-duration="1500">추천 List</h2>
+            <div class="view-spots-section">
+                <h3 class="view-spots" data-aos="fade-right" data-aos-duration="1500">
+                    뷰 맛집
+                </h3>
+                <div class="mascot-character" data-aos="fade-right" data-aos-duration="1500">
+                    <img src="./images/sub2/character.svg" alt=" 캐릭터">
+                </div>
+                <div class="spot-layout" data-aos="fade-up" data-aos-duration="1500">
+                    <!-- 1. 고정된 왼쪽 큰 이미지 (JS로 내용이 자동 업데이트 됨) -->
+                    <div class="fixed-main-card" id="mainCardDisplay">
+                        <img src="" alt="" class="card-image main-img">
+                        <div class="card-content">
+                            <div class="card-title-wrap">
+                                <span class="card-title-en main-en"></span>
+                                <span class="card-title-ko main-ko"></span>
+                            </div>
+                            <p class="card-desc main-desc"></p>
+                        </div>
+                    </div>
+                    <!-- 2. 우측 작은 이미지 슬라이더 및 컨트롤 영역 -->
+                    <div class="right-slider-section">
+                        <div class="swiper view-spots-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- 슬라이드 1: 해운대 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/view_01.png" alt="Haeundae" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Haeundae</span>
+                                            <span class="card-title-ko">해운대</span>
+                                        </div>
+                                        <p class="card-desc">부산을 대표하는 가장 유명한 해변으로 넓은 백사장과 고층 빌딩이 어우러진 도심형 바다</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 2: 더베이101 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/view_02.png" alt="TheBay101" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">TheBay101</span>
+                                            <span class="card-title-ko">더베이101</span>
+                                        </div>
+                                        <p class="card-desc">낙동강과 함께 하는 야외 정원, 조형물 등 포토존이 많은 이국적인 공간</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 3: 장산 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/view_03.png" alt="JangMountain" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">JangMountain</span>
+                                            <span class="card-title-ko">장산</span>
+                                        </div>
+                                        <p class="card-desc">해운대 신시가지와 마린시티, 부산 최고역 도심 스카이라인을 조망</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 4: F1963 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/view_04.png" alt="F1963" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">F1963</span>
+                                            <span class="card-title-ko">F1963</span>
+                                        </div>
+                                        <p class="card-desc">옛 와이어 공장을 재생한 곳으로 차가운 콘크리트와 푸른 대나무 숲 공간</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 5: 송정 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/view_05.png" alt="Sunset" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">SongJeong</span>
+                                            <span class="card-title-ko">송정</span>
+                                        </div>
+                                        <p class="card-desc">아름다운 석양을 감상할 수 있는 부산의 숨겨진 명소</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 하단 컨트롤 영역 (작은 이미지 스와이퍼 바로 밑에 종속됨) -->
+                        <div class="slider-controls">
+                            <div class="nav-buttons">
+                                <div class="custom-prev"></div>
+                                <div class="custom-next"></div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="view-spots-section">
+                <h3 class="restaurant" data-aos="fade-down" data-aos-duration="1500">
+                    추천 맛집
+                </h3>
+                <div class="mascot-character" data-aos="fade-right" data-aos-duration="1500">
+                    <img src="./images/sub2/character.svg" alt=" 캐릭터">
+                </div>
+                <div class="spot-layout" data-aos="fade-up" data-aos-duration="1500">
+                    <!-- 1. 고정된 왼쪽 큰 이미지 (JS로 내용이 자동 업데이트 됨) -->
+                    <div class="fixed-main-card" id="mainCardDisplay">
+                        <img src="" alt="" class="card-image main-img">
+                        <div class="card-content">
+                            <div class="card-title-wrap">
+                                <span class="card-title-en main-en"></span>
+                                <span class="card-title-ko main-ko"></span>
+                            </div>
+                            <p class="card-desc main-desc"></p>
+                        </div>
+                    </div>
+                    <!-- 2. 우측 작은 이미지 슬라이더 및 컨트롤 영역 -->
+                    <div class="right-slider-section">
+                        <div class="swiper view-spots-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- 슬라이드 1: 디스커버리 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/restaurant_01.png" alt="Discovery" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Discovery</span>
+                                            <span class="card-title-ko">디스커버리</span>
+                                        </div>
+                                        <p class="card-desc">루프탑에서 즐기는 브런치와 가덕도 바닷가 카페
+                                            에그타르트, 샌드위치 등 베이커리 메뉴가 인기</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 2: 비아조 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/restaurant_02.png" alt="Biazzo" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Biazzo</span>
+                                            <span class="card-title-ko">비아조</span>
+                                        </div>
+                                        <p class="card-desc">낙동강과 함께 하는 야외 정원, 조형물, 등 포토존이 많은 이국적인 공간</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 3: 플랜온 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/restaurant_03.png" alt="PlanOn" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">PlanOn</span>
+                                            <span class="card-title-ko">플랜온</span>
+                                        </div>
+                                        <p class="card-desc">인기 이탈리안 레스토랑으로, 이색적인 파스타·뇨끼·화덕피자 맛집</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 4: 요오면 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/restaurant_04.png" alt="Yoomyeon" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Yoomyeon</span>
+                                            <span class="card-title-ko">요오면</span>
+                                        </div>
+                                        <p class="card-desc">베트남식 면 요리 전문점, 진한 국물과 다양한 현지 스타일 메뉴</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 5: 사비아 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/restaurant_05.png" alt="Sabia" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Sabia</span>
+                                            <span class="card-title-ko">사비아</span>
+                                        </div>
+                                        <p class="card-desc">달맞이길에 있는 이탈리안 레스토랑, 감자 뇨끼 맛집</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 하단 컨트롤 영역 (작은 이미지 스와이퍼 바로 밑에 종속됨) -->
+                        <div class="slider-controls">
+                            <div class="nav-buttons">
+                                <div class="custom-prev"></div>
+                                <div class="custom-next"></div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-spots-section">
+                <h3 class="cafe" data-aos="fade-down" data-aos-duration="1500">
+                    추천 카페
+                </h3>
+                <div class="mascot-character" data-aos="fade-right" data-aos-duration="1500">
+                    <img src="./images/sub2/character.svg" alt=" 캐릭터">
+                </div>
+                <div class="spot-layout" data-aos="fade-up" data-aos-duration="1500">
+                    <!-- 1. 고정된 왼쪽 큰 이미지 (JS로 내용이 자동 업데이트 됨) -->
+                    <div class="fixed-main-card" id="mainCardDisplay">
+                        <img src="" alt="" class="card-image main-img">
+                        <div class="card-content">
+                            <div class="card-title-wrap">
+                                <span class="card-title-en main-en"></span>
+                                <span class="card-title-ko main-ko"></span>
+                            </div>
+                            <p class="card-desc main-desc"></p>
+                        </div>
+                    </div>
+                    <!-- 2. 우측 작은 이미지 슬라이더 및 컨트롤 영역 -->
+                    <div class="right-slider-section">
+                        <div class="swiper view-spots-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- 슬라이드 1: 워킹홀리데이 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/cafe_01.png" alt="WalkingHoliday" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">WalkingHoliday</span>
+                                            <span class="card-title-ko">워킹홀리데이</span>
+                                        </div>
+                                        <p class="card-desc">광안리를 한 눈에 바라볼 수 있는 통유리와
+                                            미드센추리 인테리어가 돋보이는 브런치 카페</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 2: 아브니르 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/cafe_02.png" alt="Avenir" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Avenir</span>
+                                            <span class="card-title-ko">아브니르</span>
+                                        </div>
+                                        <p class="card-desc">산복도로 뷰와 넓은 공간, 베이커리까지 즐길 수 있는 대형 감성 낭낭한 카페</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 3: 언벤트 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/cafe_03.png" alt="Unvent" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Unvent</span>
+                                            <span class="card-title-ko">언벤트</span>
+                                        </div>
+                                        <p class="card-desc">수플레 팬케이크와 스페셜티 커피를 함께 즐길 수 있는 감성 카페</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 4: 세븐 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/cafe_04.png" alt="Seven" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Seven</span>
+                                            <span class="card-title-ko">세븐</span>
+                                        </div>
+                                        <p class="card-desc">테라스와 넓은 실내, 힐링 분위기 만끽하는 장소, 세계적인 베르사유상 수상</p>
+                                    </div>
+                                </div>
+
+                                <!-- 슬라이드 5: 카페 보다 -->
+                                <div class="swiper-slide">
+                                    <img src="./images/sub2/cafe_05.png" alt="Boda" class="card-image">
+                                    <div class="card-content">
+                                        <div class="card-title-wrap">
+                                            <span class="card-title-en">Boda</span>
+                                            <span class="card-title-ko">카페 보다</span>
+                                        </div>
+                                        <p class="card-desc">리버뷰와 여유로운 분위기가 매력적인 강서구 감성 카페</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 하단 컨트롤 영역 (작은 이미지 스와이퍼 바로 밑에 종속됨) -->
+                        <div class="slider-controls">
+                            <div class="nav-buttons">
+                                <div class="custom-prev"></div>
+                                <div class="custom-next"></div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <nav class="footer-links">
+                        <a href="#">이용약관</a>
+                        <a href="#"><strong>개인정보처리방침</strong></a>
+                        <a href="#">저작권 안내</a>
+                        <a href="#">문의하기</a>
+                    </nav>
+                    <div class="social-icons">
+                        <ul class="icons">
+                            <li class="icon-item">
+                                <img src="./images/banner_insta.png" alt="insta" class="icons1">
+                                <img src="./images/banner_insta2.png" alt="insta2" class="icons2">
+                            </li>
+
+                            <li class="icon-item">
+                                <img src="./images/banner_face.png" alt="face" class="icons1">
+                                <img src="./images/banner_face2.png" alt="face2" class="icons2">
+                            </li>
+
+                            <li class="icon-item">
+                                <img src="./images/banner_talk.png" alt="talk" class="icons1">
+                                <img src="./images/banner_talk2.png" alt="talk2" class="icons2">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="company-info">
+                        <p>갈맷로그 | 대표번호 : 1234-5678 | 팩스번호 : 1234-5678</p>
+                        <p>주소 : 부산 중구 중앙대로 26 10층 | 사업자번호 : 123-12-12345</p>
+                        <p class="copyright">© 2026 갈맷로그. All rights reserved.</p>
+                    </div>
+                    <div class="footer-logo">
+                        <h2><img src="./images/banner_logo.png" alt="logo"></h2>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- jQuery 추가 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- AOS 오픈소스 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS 제어구문 -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

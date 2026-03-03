@@ -1,0 +1,447 @@
+@charset "utf-8";
+
+/* webfont */
+@font-face {
+    font-family: 'SchoolSafetyMustache';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimKossuyeomR.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-family: 'SchoolSafetyMustache';
+    font-size: 50px;
+    font-weight: 400;
+    color: #374B74;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: 'SUIT', sans-serif;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #111111;
+}
+
+#wrap {
+    min-width: 1360px;
+    overflow: hidden;
+}
+
+#header {
+    height: 118px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.inner_header {
+    width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb {
+    display: flex;
+    gap: 82px;
+}
+
+.gnb ul {
+    display: flex;
+    padding: 0 30px;
+    align-items: end;
+    height: 64px;
+}
+
+.menu {
+    gap: 50px;
+}
+
+.menu li a {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.icon {
+    gap: 30px;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.icon li a img {
+    display: block;
+}
+
+/* sub1 배너 */
+#sub1_banner {
+    width: 100%;
+    margin: 118px auto 50px;
+    position: relative;
+    padding-bottom: 100px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#sub1_banner.loaded {
+    opacity: 1;
+}
+
+/* 스와이퍼 영역 */
+#sub1_banner .swiper {
+    width: 100%;
+    height: 600px;
+    overflow: visible !important;
+}
+
+/* ★ 핵심 수정: 슬라이드 껍데기는 크기만 완벽하게 고정 (애니메이션 X) */
+.swiper-slide {
+    width: 1320px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 실제 디자인 아이템 (div로 한 번 더 감싼 영역) */
+.item {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 활성화된 슬라이드만 밝고 크게 */
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 하단 단추(불릿) */
+
+.swiper-pagination {
+    position: absolute !important;
+    /* 이미지 높이(600px) 아래쪽에 위치하도록 조정 */
+    bottom: -40px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #6C9BAD;
+    opacity: 1;
+    transition: 0.3s;
+    margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 30px;
+    border-radius: 5px;
+    background: #374B74;
+}
+
+/* section1 */
+#section1 {
+    width: 1320px;
+    margin: 150px auto;
+}
+
+#section1 h2 {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.course_wrap {
+    width: 1320px;
+    height: 8055px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 중앙 타임라인 선 */
+.timeline-line {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    width: 5px;
+    background-color: #374B74;
+    transform: translateX(-50%);
+}
+
+.course-row {
+    display: flex;
+    justify-content: center;
+    gap: 85px;
+    position: relative;
+    margin-bottom: 180px;
+}
+
+.odd .course-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.even .course-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.course-half {
+    width: 510px;
+    position: relative;
+    margin-top: 205px;
+}
+
+.course-large {
+    width: 100%;
+}
+
+.course-large img {
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.course-large .desc {
+    font-size: 20px;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+.left .course-large .desc {
+    text-align: right;
+}
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-img-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    /* 정사각형 비율 유지 */
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.grid-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 마우스 호버 시 블러 & 블랙 투명도 배경 */
+.grid-img-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    /* 블러 효과 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+.grid-img-overlay h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.grid-img-overlay p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.grid-img-wrap:hover img {
+    transform: scale(1.15);
+    /* 이미지 확대 */
+}
+
+.grid-img-wrap:hover .grid-img-overlay {
+    opacity: 1;
+    /* 오버레이 등장 */
+}
+
+/* footer */
+.footer {
+    background-color: #6C9BAD;
+    /* 이미지의 짙은 하늘색/청록색 */
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 0;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    margin-right: 25px;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-left: 10px;
+    /* 실제 아이콘 사용 시 img 태그나 i 태그로 교체 */
+    color: #6C9BAD;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+
+}
+
+.icon-item {
+    position: relative;
+
+}
+
+.icons2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.icon-item:hover .icons2 {
+    display: block;
+
+}
+
+.icon-item:hover .icons1 {
+    opacity: 0;
+
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.company-info p {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.footer-logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
