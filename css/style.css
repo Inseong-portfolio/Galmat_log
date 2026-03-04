@@ -99,6 +99,7 @@ body {
 
 #wrap {
     min-width: 1360px;
+    overflow: hidden;
 }
 
 #header {
@@ -258,7 +259,7 @@ body {
 
 #visual2 img {
     display: block;
-    width: 1920px;
+    width: 100%;
 }
 
 #section3 {
